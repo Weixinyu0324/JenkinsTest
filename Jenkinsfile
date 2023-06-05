@@ -3,12 +3,15 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'echo "building........."'
+        timestamps()
+        sh '''
+echo "building........."'''
       }
     }
 
     stage('test') {
       steps {
+        timestamps()
         sh 'echo "testing...."'
       }
     }
@@ -16,6 +19,7 @@ pipeline {
     stage('deploy') {
       steps {
         sh 'echo "deploying...."'
+        timestamps()
       }
     }
 
