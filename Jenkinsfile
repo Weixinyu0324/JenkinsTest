@@ -18,8 +18,8 @@ echo "building........."'''
 
     stage('deploy') {
       steps {
-        sh 'echo "deploying...."'
         timestamps()
+        sh 'echo "deploying...."'
       }
     }
 
